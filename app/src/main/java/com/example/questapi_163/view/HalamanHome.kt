@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.questapi_163.R
 import com.example.questapi_163.modeldata.DataSiswa
+import com.example.questapi_163.uicontroller.route.DestinasiHome
 import com.example.questapi_163.viewmodel.HomeViewModel
 import com.example.questapi_163.viewmodel.StatusUiSiswa
 import com.example.questapi_163.viewmodel.provider.PenyediaViewModel
@@ -170,33 +171,26 @@ fun DaftarSiswa(
 fun ItemSiswa(
     siswa: DataSiswa,
     modifier: Modifier = Modifier
-) {
-    Card(
-        modifier = modifier,
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-    ) {
-        Column(
-            modifier = Modifier
-                .padding(dimensionResource(id = R.dimen.padding_large)),
-            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
+){
+    Card(modifier = modifier,
+        elevation = CardDefaults.cardElevation(2.dp)) {
+        Column(modifier = Modifier.padding(dimensionResource(R.dimen.padding_large)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth()
-            ) {
+            Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
                     text = siswa.nama,
                     style = MaterialTheme.typography.titleLarge
                 )
+                Spacer(modifier.weight(1f))
+                Icon(
+                    imageVector = Icons.Default.Phone,contentDescription = null
+                )
+                Text(
+                    text = siswa.telpon,
+                    style = MaterialTheme.typography.titleMedium
+                )
             }
-            Spacer(modifier = Modifier.height(8.dp))
-            Icon(
-                imageVector = Icons.Default.Phone,
-                contentDescription = null
-            )
-            Text(
-                text = siswa.telpon.toString(),
-                style = MaterialTheme.typography.titleMedium
-            )
             Text(
                 text = siswa.alamat,
                 style = MaterialTheme.typography.titleMedium
