@@ -47,3 +47,10 @@ class DefaultContainerApp : ContainerApp{
         JaringanRepositoryDataSiswa(retrofitService) }
 }
 
+class AplikasiDataSiswa : Application() {
+    lateinit var containerApp: com.example.questapi_163.repositori.ContainerApp
+    override fun onCreate() {
+        super.onCreate()
+        containerApp = DefaultContainerApp()
+    }
+}
