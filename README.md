@@ -3,3 +3,8 @@
 <img width="1920" height="1080" alt="Screenshot (1942)" src="https://github.com/user-attachments/assets/13418789-c397-4f7b-973a-f849683eca22" />
 <img width="1920" height="1080" alt="Screenshot (1941)" src="https://github.com/user-attachments/assets/6200a00b-5e8f-4e85-a82e-12d3c3e8d484" />
 <img width="1920" height="1080" alt="Screenshot (1940)" src="https://github.com/user-attachments/assets/61ad21f4-9652-4999-8816-678588a50621" />
+<img width="1920" height="1080" alt="Screenshot (1963)" src="https://github.com/user-attachments/assets/f15c54e0-2d32-4676-a649-1fb7f3eb86bb" />
+<img width="1920" height="1080" alt="Screenshot (1962)" src="https://github.com/user-attachments/assets/2c6b12c1-401b-4847-b900-cd5b83720885" />
+<img width="1920" height="1080" alt="Screenshot (1961)" src="https://github.com/user-attachments/assets/c9613f52-69e0-4692-88fc-6fc3a3545ad3" />
+<img width="1920" height="1080" alt="Screenshot (1960)" src="https://github.com/user-attachments/assets/9776f89f-0256-4aad-ab56-25eba9067d7c" />
+<img width="1920" height="1080" alt="Screenshot (1959)" src="https://github.com/user-attachments/assets/e5085b19-6b05-4785-aa0f-627fbaaccb79" />
