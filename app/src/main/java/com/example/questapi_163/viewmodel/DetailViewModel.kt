@@ -1,5 +1,6 @@
 package com.example.questapi_163.viewmodel
 
+import android.annotation.SuppressLint
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -11,6 +12,7 @@ import com.example.questapi_163.repositori.RepositoryDataSiswa
 import com.example.questapi_163.uicontroller.route.DestinasiDetail
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
+import retrofit2.Response
 import java.io.IOException
 
 
@@ -31,18 +33,29 @@ class DetailViewModel (savedStateHandle: SavedStateHandle, private val repositor
 
     fun getSatuSiswa() {
         viewModelScope.launch {
-            statusUIDetail = com.example.questapi_163.viewmodel.StatusUIDetail.Loading
+            statusUIDetail = StatusUIDetail.Loading
             statusUIDetail = try {
-                com.example.questapi_163.viewmodel.StatusUIDetail.Success(
+                StatusUIDetail.Success(
                     satusiswa = repositoryDataSiswa.getSatuSiswa(
                         idSiswa
                     )
                 )
             } catch (e: IOException) {
-                com.example.questapi_163.viewmodel.StatusUIDetail.Error
+                StatusUIDetail.Error
             } catch (e: HttpException) {
-                com.example.questapi_163.viewmodel.StatusUIDetail.Error
+                StatusUIDetail.Error
             }
+        }
+    }
+
+    @SuppressLint("SuspiciousIndentation")
+    suspend fun hapusSatuSiswa(){
+        val resp: Response<Void> = repositoryDataSiswa.hapusSatuSiswa(idSiswa)
+
+        if(resp.isSuccessful){
+            println("Sukses Hapus Data : ${resp.message()}")
+        }else{
+            println("Gagal Hapus Data : ${resp.errorBody()}")
         }
     }
 }
